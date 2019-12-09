@@ -6,12 +6,12 @@
 <addon id="plugin.video.nfl.gamepass"
        name="NFL Game Pass"
        version="2018.09.08"
-       provider-name="Alexqw,divingmule,BaumSchorle,eriksoderblom,kaileu,emilsvennesson">
+       provider-name="Alexqw,Codekloeppler,divingmule,BaumSchorle,eriksoderblom,kaileu,emilsvennesson">
   <requires>
-    <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="xbmc.python" version="2.26.0"/>
     <import addon="script.module.m3u8" version="0.2.10"/>
     <import addon="script.module.requests" version="2.7.0"/>
-    <import addon="xbmc.gui" version="5.12.0"/>
+    <import addon="xbmc.gui" version="5.14.0"/>
   </requires>
   <extension point="xbmc.python.script" library="default.py">
     <provides>video</provides>

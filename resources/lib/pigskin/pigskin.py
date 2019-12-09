@@ -20,7 +20,6 @@ except ImportError:  # Python 2.7
 import requests
 import m3u8
 
-
 class pigskin(object):
     def __init__(
             self,
@@ -322,7 +321,7 @@ class pigskin(object):
             except Exception:
                 self.logger.warn('subscription check failed; continuing on.')
 
-        for auth in [self._gp_auth, self._gigya_auth]:
+        for auth in [self._gigya_auth, self._gp_auth]:
             self.logger.debug('Trying {0} authentication.'.format(auth.__name__))
             try:
                 data = auth(username, password)
@@ -941,7 +940,7 @@ class pigskin(object):
         }
         for vs in akamai_xml.iter('videoSource'):
             try:
-                vs_format = vs.attrib['name'].lower()
+                vs_format = vs.attrib['format'].lower()
                 vs_url = vs.find('uri').text
             except (KeyError, AttributeError):
                 continue
