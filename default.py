@@ -505,7 +505,9 @@ class GamepassGUI(xbmcgui.WindowXML):
         try:
             url = streams['chromecast']
         except KeyError:
-            url = streams['hls']
+            for key in streams:
+                logger.debug('KeyError: stream[' +  key + '] url is ' + streams[key])
+            url = streams['hls-v3']
 
         if addon.getSetting('use_inputstream_adaptive') == 'true' and self.has_inputstream_adaptive:
             return url
