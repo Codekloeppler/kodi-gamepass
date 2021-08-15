@@ -938,6 +938,14 @@ class pigskin(object):
             'Connection': 'keep-alive',
             'User-Agent': self.user_agent
         }
+
+        # Diva added some more validation to their API. Any content type besides
+        # application/json is refused
+        diva_header = {
+            'Connection': 'keep-alive',
+            'User-Agent': self.user_agent,
+            'Content-Type': 'application/json'
+        }
         for vs in akamai_xml.iter('videoSource'):
             try:
                 vs_format = vs.attrib['format'].lower()
@@ -948,7 +956,7 @@ class pigskin(object):
             payload = self._build_processing_url_payload(video_id, vs_url)
 
             try:
-                r = self.http_session.post(url=processing_url, data=payload)
+                r = self.http_session.post(url=processing_url, data=payload, headers=diva_header)
                 self._log_request(r)
                 data = r.json()
             except ValueError:

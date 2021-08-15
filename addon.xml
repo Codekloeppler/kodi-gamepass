@@ -10,7 +10,7 @@
   <requires>
     <import addon="xbmc.python" version="2.26.0"/>
     <import addon="script.module.m3u8" version="0.2.10"/>
-    <import addon="script.module.requests" version="2.7.0"/>
+    <import addon="script.module.requests" version="2.22.0"/>
     <import addon="xbmc.gui" version="5.14.0"/>
   </requires>
   <extension point="xbmc.python.script" library="default.py">
@@ -25,12 +25,11 @@
     <source>https://github.com/aqw/xbmc-gamepass</source>
     <forum></forum>
     <disclaimer lang="en_GB">This addon requires you to have a subscription to NFL Game Pass.[CR]Please note that these subscriptions are region restricted by the NFL.[CR]This addon is completely unofficial and is /not/ endorsed by the NFL in any way.</disclaimer>
-    <news>2019.12.09 -- Drew Brees Edition
-     + Pulled Debug Fixes from OnceUpponALoop Repository (Thx!)
-     -- Added debug setting (Codekloeppler)
-     -- Fixed wrong language file references (Codekloeppler)
-     + Fixed KeyError Exception on hls stream -> hls-v3 (Codekloeppler)
-     + Changed addon.xml prerequisite versions (Codekloeppler)
+    <news>2019.07.01 -- Pre-preseason edition
+    + Now supports Leia
+    -- updated xbmc.gui version to 5.14.0 (baardisk)
+    -- updated xbmc.python version to 2.26.0 (baardisk)
+    -- updated script.module.requests version to 2.22.0 (baardisk)
     </news>
     <assets>
       <icon>resources/art/icon.png</icon>
