@@ -1,9 +1,8 @@
-2019.12.09 -- Drew Brees Edition
-+ Pulled Debug Fixes from OnceUpponALoop Repository (Thx!)
--- Added debug setting
--- Fixed wrong language file references
-+ Fixed KeyError Exception on hls stream -> hls-v3
-+ Changed addon.xml prerequisite versions
+﻿2019.07.01 -- Pre-preseason edition
++ Now supports Leia
+-- updated xbmc.gui version to 5.14.0 (baardisk)
+-- updated xbmc.python version to 2.26.0 (baardisk)
+-- updated script.module.requests version to 2.22.0 (baardisk)
 
 2018.09.08 -- A Game of Inches Edition
 + Import the latest pigskin.py. Relevant changes are:
